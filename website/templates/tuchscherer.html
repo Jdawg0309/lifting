@@ -1,0 +1,211 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <!-- <link rel="stylesheet" href="{{  url_for('static', filename='calculator.css') }}"> -->
+{% endblock %}
+
+{% block title %}
+    RPE (Rate of Percieved Exertion)
+{% endblock %}
+
+{% block content %}
+    <article class="container">
+        <h1>What is Mike Tuchscherer's Chart</h1>
+        <p>Mike Tuchscherer's RPE (Rate of Perceived Exertion) chart is a popular tool used by powerlifters, bodybuilders, and strength athletes to assess the intensity of their workouts. In this article, we will take a closer look at what RPE is, how Mike Tuchscherer's chart works, and how it can be used to improve your training.</p>
+        <table id="tuchscherer"  class="table table-bordered">
+            <tr>
+                <th> </th>
+                <th>10</th>
+                <th>9.5</th>
+                <th>9</th>
+                <th>8.5</th>
+                <th>8</th>
+                <th>7.5</th>
+                <th>7</th>
+                <th>6.5</th>
+                <th>6</th>
+                <th>5.5</th>
+                <th>5</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>1.00</td>
+                <td>0.978</td>
+                <td>0.955</td>
+                <td>0.939</td>
+                <td>0.922</td>
+                <td>0.907</td>
+                <td>0.892</td>
+                <td>0.878</td>
+                <td>0.863</td>
+                <td>0.850</td>
+                <td>0.837</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>0.955</td>
+                <td>0.939</td>
+                <td>0.922</td>
+                <td>0.907</td>
+                <td>0.892</td>
+                <td>0.878</td>
+                <td>0.863</td>
+                <td>0.850</td>
+                <td>0.837</td>
+                <td>0.824</td>
+                <td>0.811</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>0.922</td>
+                <td>0.907</td>
+                <td>0.892</td>
+                <td>0.878</td>
+                <td>0.863</td>
+                <td>0.850</td>
+                <td>0.837</td>
+                <td>0.824</td>
+                <td>0.811</td>
+                <td>0.7985</td>
+                <td>0.786</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>0.892</td>
+                <td>0.878</td>
+                <td>0.863</td>
+                <td>0.850</td>
+                <td>0.837</td>
+                <td>0.824</td>
+                <td>0.811</td>
+                <td>0.799</td>
+                <td>0.786</td>
+                <td>0.774</td>
+                <td>0.761</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>0.863</td>
+                <td>0.850</td>
+                <td>0.837</td>
+                <td>0.824</td>
+                <td>0.811</td>
+                <td>0.799</td>
+                <td>0.786</td>
+                <td>0.774</td>
+                <td>0.762</td>
+                <td>0.750</td>
+                <td>0.739</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>0.863</td>
+                <td>0.85</td>
+                <td>0.837</td>
+                <td>0.824</td>
+                <td>0.811</td>
+                <td>0.799</td>
+                <td>0.786</td>
+                <td>0.774</td>
+                <td>0.762</td>
+                <td>0.75</td>
+                <td>0.739</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>0.811</td>
+                <td>0.799</td>
+                <td>0.786</td>
+                <td>0.774</td>
+                <td>0.762</td>
+                <td>0.751</td>
+                <td>0.739</td>
+                <td>0.723</td>
+                <td>0.707</td>
+                <td>0.692</td>
+                <td>0.677</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>0.786</td>
+                <td>0.774</td>
+                <td>0.762</td>
+                <td>0.751</td>
+                <td>0.739</td>
+                <td>0.723</td>
+                <td>0.707</td>
+                <td>0.694</td>
+                <td>0.68</td>
+                <td>0.665</td>
+                <td>0.65</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>0.762</td>
+                <td>0.751</td>
+                <td>0.739</td>
+                <td>0.723</td>
+                <td>0.707</td>
+                <td>0.694</td>
+                <td>0.68</td>
+                <td>0.667</td>
+                <td>0.653</td>
+                <td>0.638</td>
+                <td>0.624</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>0.739</td>
+                <td>0.723</td>
+                <td>0.707</td>
+                <td>0.694</td>
+                <td>0.68</td>
+                <td>0.667</td>
+                <td>0.653</td>
+                <td>0.64</td>
+                <td>0.626</td>
+                <td>0.611</td>
+                <td>0.597</td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>0.707</td>
+                <td>0.694</td>
+                <td>0.68</td>
+                <td>0.667</td>
+                <td>0.653</td>
+                <td>0.64</td>
+                <td>0.626</td>
+                <td>0.613</td>
+                <td>0.589</td>
+                <td>0.584</td>
+                <td>0.57</td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>0.68</td>
+                <td>0.667</td>
+                <td>0.653</td>
+                <td>0.64</td>
+                <td>0.626</td>
+                <td>0.613</td>
+                <td>0.599</td>
+                <td>0.586</td>
+                <td>0.574</td>
+                <td>0.559</td>
+                <td>0.546</td>
+              </tr>
+        </table>
+        <h2>How does Mike Tuchscherer's RPE chart work?</h2>
+        <p>Mike Tuchscherer's RPE chart is a tool used to estimate the amount of weight that an athlete should lift for a given number of reps based on their RPE rating. The chart includes a range of RPE values, from 6 to 10, and provides a suggested percentage of one-rep max (1RM) for each RPE value.</p>
+        <p>For example, if an athlete performs a set of squats with an RPE rating of 8, they would look up the corresponding percentage on the chart for an RPE of 8. This would give them an estimate of how much weight they should lift for that set, based on their perceived exertion.</p>
+        <h2>How can you use Mike Tuchscherer's RPE chart in your training?</h2>
+        <p>Using Mike Tuchscherer's RPE chart in your training can be a useful tool for tracking progress and adjusting your training based on how you are feeling on any given day. By using RPE ratings to gauge the intensity of your workouts, you can better manage fatigue and avoid overtraining.</p>
+        <p>For example, if you are feeling particularly fatigued on a given day, you can use the RPE chart to adjust the weight you are lifting for a given number of reps, so that you can still get a challenging workout in without risking injury or burnout. Conversely, if you are feeling strong and energized, you can use the RPE chart to push yourself to lift heavier weights and challenge your limits.</p>
+        <p>In addition, using RPE ratings can be a useful tool for tracking progress over time. By tracking the RPE ratings for each set of a given exercise, you can see how your perceived exertion changes over time as you get stronger and more fit. This can help you identify areas where you may need to focus more on improving your strength or technique, and can also help you set realistic goals for your training.</p>
+        <h2>Conclusion</h2>
+        <p>Mike Tuchscherer's RPE chart is a valuable tool for any athlete looking to improve their strength and fitness. By using RPE ratings to gauge the intensity of your workouts, you can better manage fatigue, avoid injury and burnout, and track your progress over time. Whether you are a powerlifter, bodybuilder, or just looking to improve your overall fitness, incorporating RPE ratings into your training can help you get the most out of your workouts and achieve your goals.</p>
+    </article>
+    
+{% endblock %}
+

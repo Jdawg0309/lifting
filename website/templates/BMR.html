@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{  url_for('static', filename='style.css') }}">
+{% endblock %}
+
+{% block title %}
+    BMI Calculator
+{% endblock %}
+
+{% block content %}
+    <article class="container">
+        <h1>BMR/TDEE Calculator: Understanding Your Body's Energy Needs</h1>
+        <p>If you're interested in losing weight, gaining muscle, or simply maintaining a healthy lifestyle, it's important to understand how many calories your body needs to function properly. Your Basal Metabolic Rate (BMR) is the number of calories your body burns at rest, simply to keep your body functioning. Factors that affect your BMR include your age, height, weight, and gender.</p>
+        <div class="calculator m-5">
+            <label>What is your gender?</label> 
+            <div class="gender">
+                <input type="radio" id="male" name="gender" value="male" checked>
+                <label for="male">Male</label>
+                 
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>  
+            </div>
+    
+            <div>
+                <label for="unit-system" name="unit-system">Units:</label>
+                <select id="unit-system">
+                    <option value="imperial">Imperial</option>
+                    <option value="metric">Metric</option>
+                </select>  
+            </div>
+        
+            <div>
+                <label>What is your weight? <span class="unit-label"></span></label> 
+                <input type="number" id="weight">
+            </div>
+             
+            <div>
+                <label>What is your height? <span class="unit-label"></span></label> 
+                <input type="number" id="height">
+            </div>  
+             
+            <div>
+                <label>What is your age? </label> 
+                <input type="number" id="age">  
+            </div>
+            
+            <div>
+                <label>What is your activity Level?</label>
+                <select id="activityLevel">
+                    <option value="1.0">BMR</option>
+                    <option value="1.2">Sendentary (Office Job)</option>
+                    <option value="1.35">Light Acitve (1-2 workouts per week)</option>
+                    <option value="1.5">Moderately Active (3-5 workouts per week)</option>
+                    <option value="1.55">Very Active (6-7 workouts per week)</option>
+                    <option value="1.6">Athlete (2 Workouts Per Day)</option>
+                  </select>
+            </div> 
+
+            <input id='BMR' type="submit" class="btn-primary">
+
+            <h1><span id='resultbmr'></span></h1>
+        </div>
+        <p>Calculating your BMR can help you determine how many calories you need to consume each day to maintain your current weight or to reach your fitness goals. Fortunately, BMR calculators are readily available online and can be a useful tool in helping you achieve your health and fitness goals.</p>
+        <h2>What is Basal Metabolic Rate (BMR)?</h2>
+        <p>Your body uses energy, in the form of calories, to perform all of its daily functions. This includes things like breathing, circulating blood, regulating temperature, and even digesting food. Your Basal Metabolic Rate (BMR) is the number of calories your body needs to perform these basic functions while at rest.</p>
+        <p>Even when you're sleeping or sitting still, your body is using energy to maintain basic functions. This is why your BMR is the minimum amount of energy your body needs to function properly. Any additional activity or exercise you do throughout the day will require additional energy and, therefore, additional calories.</p>
+        <h2>Factors Affecting BMR</h2>
+        <p>Several factors can affect your BMR, including age, height, weight, and gender. Here's a closer look at how each of these factors can impact your BMR:</p>
+        <ul>
+        <li>Age: As you age, your BMR tends to decrease. This is because your body naturally loses muscle mass over time, which means you burn fewer calories even when at rest.</li>
+        <li>Height: Taller people generally have a higher BMR than shorter people, because they have more body mass to maintain.</li>
+        <li>Weight: Heavier people typically have a higher BMR than lighter people, because it takes more energy to maintain a larger body.</li>
+        <li>Gender: Men generally have a higher BMR than women, because they have more muscle mass and a higher percentage of lean body mass.</li>
+        </ul>
+        <h2>How to Calculate Your BMR</h2>
+        <p>To calculate your BMR, you can use a BMR calculator. There are several online calculators available that take into account your age, height, weight, and gender. Some calculators may also ask about your activity level and exercise habits, as these can impact your overall calorie needs.</p>
+        <p>Once you have calculated your BMR, you can use this number to determine how many calories you need to consume each day to maintain your current weight or to reach your fitness goals. For example, if your BMR is 1,500 calories per day and you want to lose weight, you may aim to consume 1,200 calories per day to create a calorie deficit.</p>
+        <h2>Limitations of BMR Calculators</h2>
+        <p>While BMR calculators can be a useful tool for estimating your basic energy needs, it's important to remember that these calculations are just an estimate. They do not take into account individual variations in metabolism, genetics, and other factors that can impact calorie needs.
+
+        In addition, BMR calculators may not be accurate for people who are pregnant, breastfeeding, or have certain medical conditions, such as thyroid disorders. If you have concerns about your calorie needs or are experiencing any health issues, it's always best to consult with a healthcare provider or registered dietitian.</p>
+    </article>
+    
+    
+    <script src="{{ url_for('static', filename='BMR.js') }}"></script>
+{% endblock %}

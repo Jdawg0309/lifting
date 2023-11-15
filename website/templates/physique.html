@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fileUpload.css">
+{% endblock %}
+
+{% block title %}
+    Physique
+{% endblock %}
+
+{% block content %}
+<div class="container d-flex justify-content-center">
+    <div class="container row">
+        {% for physique in user.physique_data %}
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top img-fluid" src="physique/{{physique.id}}" alt="Physique Image"" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Weight: {{ physique.weight }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{ physique.date.strftime('%m-%d-%Y') }}</h6>
+                    <p class="card-text">{{ physique.comments }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="calculator mt-5">
+        <form method="post" enctype="multipart/form-data">
+            <label for="date">Date:</label> 
+            <input type="date" id="date" name="date" required>
+
+            <label for="weight">Weight:</label> 
+            <input type="text" id="weight" name="weight" required>
+
+            <label for="comments">Comments:</label>
+            <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+            
+
+            <div class="frame">
+                <center>
+                    <div class="title">
+                        <h1>Drop file to upload</h1>
+                    </div>
+            
+                    <div class="dropzone">
+                        <div class="justify-content-center">
+                            <img src="http://100dayscss.com/codepen/upload.svg" class="upload-icon" />
+                            <input type="file" class="upload-input" name="physique_pic" />
+                        </div>
+                    </div>
+            
+                    <button class="btn btn-primary" type="submit">Submit</button>
+            
+                </center>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{  url_for('static', filename='style.css') }}">
+{% endblock %}
+
+{% block title %}
+    Deadlift Dynasty
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Understanding the DOTS Coefficient in Powerlifting</h1>
+    <p>If you're a powerlifter, you may be familiar with various scoring systems used to compare lifters of different body weights and sizes. One such system is the DOTS coefficient. In this article, we'll explore what the DOTS coefficient is, how it's calculated, and how it differs from other scoring systems like Wilks.</p>
+
+    <div class="calculator m-5">
+            <label>What is your gender?</label> 
+            <div class="gender">
+                <input type="radio" id="male" name="gender" value="male" checked>
+                <label for="male">Male</label>
+                 
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>  
+            </div>
+
+        <div>
+            <label for="unit-system">Units:</label>
+            <select name="unit-system" id="unit-system">
+                <option value="imperial">Imperial</option>
+                <option value="metric">Metric</option>
+            </select>  
+        </div>
+
+        <div>
+            <label>What is your weight?</label> 
+            <input type="number" id="weight">
+        </div>
+
+        <div>
+            <label>What is your total (SBD)?</label> 
+            <input type="number" id="total">
+        </div>  
+
+        <input id='dots' type="submit" class="btn-primary">
+
+        <h1><span id='resultDots'></span></h1>
+    </div>
+    
+    <h2>What is the DOTS Coefficient?</h2>
+    <p>The DOTS coefficient is a powerlifting scoring system that takes into account an athlete's body weight, age, and gender to calculate a score that can be used to compare lifters of different sizes. DOTS stands for "Determined Old Time Strength," and it was created by the website OpenPowerlifting.org.</p>
+
+    <h2>How is the DOTS Coefficient Different from Wilks?</h2>
+    <p>The DOTS coefficient is similar to the Wilks coefficient, another popular powerlifting scoring system. However, there are a few key differences between the two.</p>
+
+    <ul>
+        <li><strong>The formula:</strong> The formulas used to calculate the DOTS coefficient and the Wilks coefficient are different. While both take into account body weight and the weight lifted, the DOTS coefficient also considers age and gender.</li>
+        <li><strong>Age and gender adjustment:</strong> The DOTS coefficient includes an adjustment factor based on age and gender, while the Wilks coefficient does not.</li>
+        <li><strong>Different maximum scores:</strong> The maximum score for the DOTS coefficient is not the same as the maximum score for the Wilks coefficient. This means that a lifter who has a high Wilks score may not necessarily have a high DOTS score, and vice versa.</li>
+    </ul>
+</div>
+    
+    <script src="{{ url_for('static', filename='dots.js') }}"></script>
+{% endblock %}

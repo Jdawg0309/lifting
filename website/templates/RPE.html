@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{  url_for('static', filename='style.css') }}">
+{% endblock %}
+
+{% block title %}
+    RPE (Rate of Percieved Exertion)
+{% endblock %}
+
+{% block content %}
+    <article class="container">
+        <h1>Using RPEs for Powerlifting: How to Optimize Your Training</h1>
+        <p>Powerlifting is a sport that requires strength, speed, and technique. To be successful in powerlifting, athletes must train at the appropriate intensity and volume to maximize their strength gains while avoiding overtraining and injury. One tool that powerlifters can use to optimize their training is the Rating of Perceived Exertion (RPE) scale.</p>
+        <div class="calculator m-5">
+            <form>
+                <label for="weight">Weight Lifted:</label> 
+                <input type="number" id="weight" name="weight">  
+                
+                <label for="reps">Reps Completed:</label> 
+                <input type="number" id="reps" name="reps">  
+                
+                <label for="rpe">RPE:</label>
+                <select id="rpe" name="rpe">
+                    <option value="10">10 - Max Effort</option>
+                    <option value="9.5">9.5 - Very Hard</option>
+                    <option value="9">9 - Very Hard</option>
+                    <option value="8.5">8.5 - Hard</option>
+                    <option value="8">8 - Hard</option>
+                    <option value="7.5">7.5 - Moderate</option>
+                    <option value="7">7 - Moderate</option>
+                    <option value="6.5">6.5 - Easy</option>
+                    <option value="6">6 - Easy</option>
+                    <option value="6.5">5.5 - Very Easy</option>
+                    <option value="6">5 - Very Easy</option>
+                </select>  
+                
+                <input id="RPE" class="btn-primary" type="button" value="Calculate Est. RM">
+            </form>
+        
+            <p id="resultrpe"></p>    
+            <script src="{{ url_for('static', filename='RPE.js') }}"></script>
+        </div>
+        <h2 class="container">What is RPE?</h2>
+        <p>RPE is a measure of how hard an exercise feels to an individual. It is a subjective measure of internal physiological response to exercise that takes into account individual fitness level, fatigue, and other subjective factors. RPE is commonly used in sports science and exercise physiology to monitor and prescribe exercise intensity.</p>
+        <h2>Using RPEs in Powerlifting</h2>
+        <p>In powerlifting, RPEs are used to determine the level of intensity for a given set or exercise. Powerlifters typically use a modified RPE scale that ranges from 6 to 10, with 6 being no exertion and 10 being maximal exertion. The ratings correspond to verbal descriptors of exercise intensity, such as "moderate" for a rating of 6 and "maximal" for a rating of 10.</p>
+        <p>For example, a powerlifter may perform a set of squats at a weight that corresponds to an RPE of 8, meaning the weight was lifted with a high level of effort, but still had 2 reps left in the tank. Alternatively, the lifter may perform a set of deadlifts at a weight that corresponds to an RPE of 10, meaning the weight was lifted with maximal effort and no reps were left in the tank.</p>
+        <h2>Benefits of Using RPEs in Powerlifting</h2>
+        <p>There are several benefits to using RPEs in powerlifting. First, RPEs allow powerlifters to adjust their training intensity on a daily basis based on how they are feeling. This allows them to avoid overtraining and injury, which can lead to setbacks in their training.</p>
+        <p>Second, RPEs allow powerlifters to perform their lifts at a higher level of intensity than traditional percentage-based programs. This is because RPEs take into account individual differences in strength and fatigue, allowing powerlifters to lift at a weight that corresponds to their individual level of effort.</p>
+        <p>Finally, RPEs can help powerlifters to better understand their bodies and how they respond to different training stimuli. By using RPEs to monitor their training, powerlifters can identify patterns and adjust their training to achieve their specific goals.</p>
+        <h2>Limitations of Using RPEs in Powerlifting</h2>
+        <p>While RPEs are a useful tool for powerlifters, they do have some limitations. First, RPEs are subjective, which means that they may be influenced by factors such as mood, motivation, and individual differences in perception. Additionally, RPEs may not accurately reflect the actual physiological response to exercise, particularly in highly trained individuals.</p>
+        <p>Second, RPEs may not be appropriate for novice lifters who are still learning proper technique. Novice lifters may not have the experience or knowledge to accurately rate their perceived exertion
+            continue from here <p>Second, RPEs may not be appropriate for novice lifters who are still learning proper technique. Novice lifters may not have the experience or knowledge to accurately rate their perceived exertion
+            and may benefit more from following a percentage-based program or working with a coach to ensure proper technique and form.</p>
+            <h2>How to Use RPEs in Powerlifting</h2>
+            <p>To use RPEs in powerlifting, it's important to have a good understanding of the RPE scale and how it corresponds to different levels of effort. Powerlifters should start with a weight that corresponds to an RPE of 6 and gradually increase the weight and RPE over time as their strength and technique improve.</p>
+            <p>Powerlifters should also be aware of the limitations of the RPE scale and use it in conjunction with other measures of training intensity, such as bar speed or heart rate, to ensure that they are training at the appropriate level of intensity.</p>
+            <p>Additionally, powerlifters should keep a training log to record their RPEs and other training variables, such as sets, reps, and weight lifted. This can help them to track their progress over time and make adjustments to their training as needed.</p>
+            
+            <h2>Conclusion</h2>
+            <p>Using RPEs in powerlifting can be a valuable tool for optimizing training intensity and avoiding overtraining and injury. While RPEs are subjective and have some limitations, they can help powerlifters to better understand their bodies and achieve their specific goals. By using RPEs in conjunction with other measures of training intensity and keeping a training log, powerlifters can maximize their strength gains and achieve their full potential in the sport of powerlifting.</p>
+    </article>
+{% endblock %}
+
+

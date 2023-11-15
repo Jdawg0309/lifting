@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    BMR Calculator
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{  url_for('static', filename='style.css') }}">
+{% endblock %}
+
+{% block content %}
+    <article class="container">
+        <h1>BMI: What It Is and How It's Used</h1>
+        <p>Body Mass Index, or BMI, is a commonly used measurement to determine if someone is underweight, normal weight, overweight, or obese. It's a simple calculation that takes into account a person's height and weight, and is used as a screening tool to identify potential health risks related to weight. That being said, it is also not the most accurate tool for health.</p>
+        <div class="calculator m-5">
+            <div>
+                <div>
+                    <label for="unit-system">Units:</label> 
+                    <select id="unit-system">
+                        <option value="imperial">Imperial</option>
+                        <option value="metric">Metric</option>
+                    </select>  
+                </div>
+            
+                <div>
+                    <label>What is your weight?</label> 
+                    <input type="number" id="weight">
+                </div>
+            
+                <div>
+                    <label>What is your height?</label> 
+                    <input type="number" id="height">
+                </div>  
+        
+                <input id='BMI' type="submit" class="btn-primary">
+        
+                <h1><span id='resultbmi'></span></h1>
+            </div>
+            <!-- Show a chart here of the people in age group and average gender BMI -->
+    
+        </div>
+
+        <h2>What is BMI?</h2>
+  <p>BMI is a measurement that compares a person's weight to their height. It's calculated by dividing a person's weight in kilograms by their height in meters squared for metric units, and by dividing a person's weight in pounds by their height in inches squared, and then multiplying the result by 703 for imperial units. The formulas are:</p>
+  <ul>
+    <li>Metric units: BMI = weight (kg) / (height (m) x height (m))</li>
+    <li>Imperial units: BMI = (weight (lbs) / (height (in) x height (in))) x 703</li>
+  </ul>
+  <p>For example, a person who weighs 70 kg and is 1.75 meters tall would have a BMI of 22.9 using metric units, while a person who weighs 154 pounds and is 69 inches tall would have a BMI of 22.8 using imperial units.</p>
+  <p>A BMI between 18.5 and 24.9 is considered normal, while a BMI of 25 or higher is considered overweight. A BMI of 30 or higher is considered obese.</p>
+
+        <h2>What are the health risks associated with BMI?</h2>
+        <p>BMI is used as a screening tool to identify potential health risks related to weight. People who have a BMI that falls outside of the normal range may be at increased risk for health problems such as diabetes, heart disease, high blood pressure, and certain types of cancer.</p>
+        <p>It's important to note, however, that BMI is not a diagnostic tool. A person's BMI alone does not determine their overall health, and other factors such as age, gender, muscle mass, and bone density should also be taken into account when evaluating someone's health status.</p>
+
+        <h2>How is BMI used?</h2>
+        <p>BMI is used as a screening tool to identify potential health risks related to weight. It's often used by healthcare professionals as part of a routine physical exam or health screening, and can help identify individuals who may need further evaluation or treatment for weight-related health conditions.</p>
+        <p>However, BMI should not be used as a standalone tool to determine a person's health status. Other factors, such as family history, lifestyle habits, and overall health status should also be taken into account when evaluating someone's health.</p>
+
+        <h2>Limitations of BMI</h2>
+        <p>While BMI is a useful tool for identifying potential health risks related to weight, it has some limitations. For example, it does not take into account a person's body composition or where their weight is located on their body.</p>
+        <p>Muscle mass, for example, can greatly impact a person's BMI. A person who has a lot of muscle mass may have a high BMI, even though they have a low body fat percentage and are in good health. Conversely, an older person with little muscle mass may have a low BMI, even though they have a high body fat percentage and are at increased risk for health problems.</p>
+        <p>BMI also does not take into account where a person's weight is located on their body. People who carry weight around their waist, for example, are at increased risk for health problems such as diabetes and heart disease, regardless of their overall BMI.</p>
+
+    </article>
+    <script src="{{ url_for('static', filename='BMI.js') }}"></script>
+{% endblock %}

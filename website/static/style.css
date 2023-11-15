@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      color: #fff !important;
+      font-family: 'Roboto Condensed', sans-serif;
+      box-sizing: border-box;
+      font-size: 1.1rem;
+      outline: none;
+    }
+
+    img {
+      max-width: 100%; 
+      height: auto; 
+      max-height: 50vh; 
+    }
+
+input[type='button'], input[type='submit']{
+    color: #fff !important;
+}
+
+body{
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: #111111DD;
+    align-items: center;
+}
+
+
+li{
+    list-style: none;
+}
+
+select, option, input{
+    color: #000  !important;
+}
+
+h5{
+    margin: 0;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-top: 15px;
+  }
+
+.gender label{
+    display: inline;
+}
+
+#index-page:before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#index-page{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url(../static/tempBackground.jpg) no-repeat center center/ cover;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#introText{
+    z-index: 9;
+}
+
+
+.container{
+    margin: 1rem 0;
+}
+
+
+.btn-primary ,a.btn-primary, .btn-primary:active{
+    margin: 20px;
+    z-index: 2;
+    background-color: #111111DD !important;
+    padding: 0.6rem;
+    transition: background-color 0.3s ease-in;
+    border: #000 solid 3px !important;
+    outline: none;
+    display: block;
+}
+
+.btn-primary:hover{
+    transition: background-color,border-color 0.3s ease-in;
+    background-color: rgb(140, 90, 0);
+    border-color: #000;
+    outline: none;
+}
+
+nav li a{
+    font-size: 0.9rem;
+}
+
+nav li.nav-item{
+    padding: 0.5rem;
+}
+
+nav li.nav-item:hover{
+    transition: background-color 0.3s ease-in;
+    background-color: rgb(200, 140, 10);
+}
+
+#navbar{
+    position: sticky !important;
+    width: 100vw;
+    background-color: transparent !important;
+    z-index: 10;
+    justify-content: space-between;
+    transition: background-color ease-in-out 0.3s;
+    padding: 0 4rem;
+}
+
+.navbar{
+    padding: 0rem;
+}
+
+.card{
+    width: 12rem !important;
+    background-color: rgb(200, 140, 10);
+}
+
+#navbar.scroll{
+    background-color: #111111DD !important;
+}
+
+
+#navbar:hover{
+    background-color: #111111DD !important;
+    transition: background-color ease-in-out 0.3s;
+}
+
+
+.nav-item:hover{
+    transition: background-color 0.3s ease-in;
+    background-color: rgb(200, 140, 10);
+}
+
+.dropdown-menu.show{
+    padding: 0;
+    border-radius: 0;
+    background-color: #111111;
+}
+
+
+.dropdown-item:hover{
+    transition: background-color 0.3s ease-in;
+    background-color: rgb(140, 100, 0);
+}
+
+.calculator{
+    padding: 1rem;
+    background-color: rgb(200, 140, 10);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px black double;
+}
+
+
+.main-content{
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+
+.logo{
+    color: rgb(200, 140, 10)!important;
+    font-weight: 600;
+}
+#contact {
+    display: flex;
+  }
+
+  #contact .contact-form {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #contact .contact-form input[type='text'],
+  #contact .contact-form input[type='email'],
+  #contact .contact-form textarea,
+  #contact select {
+    text-align: center;
+    padding: 1rem;
+    width: 75vw;
+    margin: 0.5rem;
+    font-size: 1rem;
+    border-radius: 20px;
+    transition: border 0.3s ease-in;
+  }
+
+  #contact .contact-form input[type='text']:hover,
+  #contact .contact-form input[type='email']:hover,
+  #contact .contact-form textarea:hover,
+  #contact select:hover {
+    border: 5px solid rgb(200, 140, 10);
+  }
+
+  #contact .contact-form a.btn-primary {
+    color: #333;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 20px;
+    padding: 1.20rem 3rem;
+    background-color: #fff;
+    transition: border 0.3s ease-in;
+  }
+
+  #contact .contact-form a.btn-primary:hover {
+    border: 5px solid rgb(200, 140, 10);
+  }
+
+
+footer{
+    width: 100%;
+}
+
+#index-page{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.links{
+    color: rgb(200, 140, 10) !important;
+}
+
+.alert{
+    width: 100% !important;
+}
+
+textarea{
+    color: #000 !important;
+}
+
+.signRedirect{
+    background-color: #111111;
+}

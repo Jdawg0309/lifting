@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Wilks Calculator
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{  url_for('static', filename='style.css') }}">
+{% endblock %}
+
+{% block content %}
+<article class="container">
+    <h1>The Wilks Formula: A Guide to Understanding Powerlifting Scores</h1>
+    <p>Powerlifting is a sport that involves three lifts: the squat, bench press, and deadlift. Competitors aim to lift as much weight as possible in each of these lifts, and their total weight lifted is used to calculate their overall score. However, comparing scores across different weight classes can be difficult, since heavier lifters generally have an advantage. This is where the Wilks formula comes in.</p>
+
+    <div class="calculator m-5">
+        <label>What is your gender?</label> 
+        <div class="gender">
+            <input type="radio" id="male" name="gender" value="male" checked>
+            <label for="male">Male</label>
+                
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>  
+        </div>
+
+        <div>
+            <label for="unit-system">Units</label>
+            <select name="unit-system" id="unit-system">
+                <option value="imperial">Imperial</option>
+                <option value="metric">Metric</option>
+            </select>  
+        </div>
+
+        <div>
+            <label>What is your weight?</label> 
+            <input type="number" id="weight">
+        </div>
+
+        <div>
+            <label>What is your total (SBD)?</label> 
+            <input type="number" id="total">
+        </div>  
+
+        <input id='wilks' type="submit" class="btn-primary">
+
+        <h1><span id='resultWilks'></span></h1>
+    </div>
+    <h2>What is the Wilks Formula?</h2>
+    <p>The Wilks formula is a coefficient-based equation used to normalize scores in powerlifting competitions. It takes into account an individual's body weight, as well as the weight they lifted, to calculate a score that is comparable across different weight classes. The formula was developed by Robert Wilks in 1994 and has since become a standard method for scoring powerlifting competitions.</p>
+    <h2>How Does the Wilks Formula Work?</h2>
+    <p>The Wilks formula works by taking the weight lifted by a lifter and multiplying it by a coefficient. The coefficient is calculated based on the lifter's body weight and is determined by a polynomial equation. The formula takes into account the fact that larger lifters can generally lift more weight, but it also levels the playing field by giving smaller lifters a higher coefficient. This means that a smaller lifter who lifts the same weight as a larger lifter will have a higher score.</p>
+    <h2>The Pros of the Wilks Formula</h2>
+    <p>The Wilks formula is a widely used method for scoring powerlifting competitions because it is relatively simple to use and is effective at normalizing scores across different weight classes. The formula is also adaptable and can be adjusted as needed to reflect changes in the sport or in the lifting community.</p>
+    <h2>The Cons of the Wilks Formula</h2>
+    <p>Despite its widespread use, the Wilks formula is not without its criticisms. Some lifters feel that the formula unfairly favors smaller lifters, since they receive a higher coefficient. Others argue that the formula does not take into account differences in body composition, such as muscle mass versus fat mass. Additionally, some feel that the Wilks formula is not an accurate representation of true strength, since it only takes into account three lifts and does not consider other factors such as speed or endurance.</p>
+    <h2>What Does the Wilks Score Mean?</h2>
+    <p>The Wilks score is a number that represents a lifter's overall performance in a powerlifting competition. A higher Wilks score means that the lifter lifted more weight relative to their body weight, while a lower Wilks score means that they lifted less weight relative to their body weight. The Wilks score is often used to compare lifters across different weight classes and is also used to determine the winner of a powerlifting competition.</p>
+    <h2>What is a good Wilks Score?</h2>
+    <p>The Wilks score is a way to compare the relative strength of powerlifters of different weights. It takes into account the lifter's bodyweight and the amount of weight lifted, allowing for a fair comparison between lifters of different sizes. Generally speaking, a higher Wilks score indicates a stronger lifter.
+
+        What is considered a good Wilks score can vary depending on factors such as gender, age, and weight class. In general, a Wilks score above 400 is considered to be a strong score for male lifters, while a score above 300 is considered to be strong for female lifters.
+        
+        However, it's important to remember that Wilks scores are just one measure of strength and should not be the only factor used to evaluate a lifter's performance. Other factors such as technique, consistency, and mental toughness are also important to consider.
+        
+        In addition, it's worth noting that the Wilks formula has its limitations and is not perfect. Some critics argue that it unfairly favors lifters with a certain body type or weight class. However, it remains a widely used and accepted method for comparing powerlifters of different sizes.
+        
+        Ultimately, what is considered a good Wilks score will depend on your personal goals and the context in which you are competing. If you're just starting out in powerlifting, focusing on improving your technique and building a solid foundation of strength should be your main priority. As you progress, setting realistic goals for your Wilks score can be a helpful way to track your progress and motivate yourself to continue improving.</p>
+    <h2>Conclusion</h2>
+    <p>The Wilks formula is a popular method for normalizing scores in powerlifting competitions. While it has its pros and cons, it is generally considered an effective way to compare lifters across different weight classes. If you're a powerlifter, understanding the Wilks formula can help you better understand your scores and how you stack up against other lifters in your weight class.</p>
+</article>
+    <script src="{{ url_for('static', filename='wilks.js') }}"></script>
+{% endblock %}
